@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        div#res {
+            margin-top: 10px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Pais de Nascimento <input type="text" name="txtNac" id="txtNac">
+    <input type="button" value="Submit" onclick="nacionalidade()">
+    <div id="res">
+
+    </div>
+    <script>
+        function nacionalidade() { //debugger
+            var txtNac = window.document.querySelector('input#txtNac')
+            var res = window.document.querySelector('div#res')
+            var n = txtNac.value 
+            res.innerHTML = `Nasceu em ${n} ` 
+            var pais = n.toLowerCase()  
+            if (pais == `portugal`) {
+                res.innerHTML +=  `<p><strong>Português</strong></p>`
+                res.style.background = 'red'
+            }else {
+                res.innerHTML += `<p><strong>Estrangeiro</p></strong>`
+                res.style.background = 'green'
+            }
+        }
+    </script>
+</body>
+</html>

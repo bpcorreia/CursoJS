@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <h2>Clique nas teclas do rato</h2>
+    <style>
+        div#area {
+            font: normal 14pt Arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja com Listener...
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')        
+        a.addEventListener('click',clicar)
+        a.addEventListener('mouseover',entrar)
+        a.addEventListener('mouseout',sair)
+        a.addEventListener('wheel', rato)
+        a.addEventListener('mousedown', botaorato )
+                
+        function clicar() {
+            a.innerText = 'Clicou!!'
+            a.style.background = 'red'
+            window.document.body.style.backgroundColor = 'white'
+           
+       }
+        function entrar() {
+            a.innerText = 'Entrou'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+        function rato() {
+          window.document.body.style.backgroundColor = 'black'
+          a.style.fontSize = '15px'
+          a.innerText = 'Detectada rotação do scrool!'
+          
+        }
+        function botaorato() { //debugger
+            var btrato = event.button
+            switch (btrato) {
+                case 0: //botao direito rato
+                a.innerText += "Botao Direito pressionado!" 
+                    break;            
+                case 2://botao esquerdo rato
+                a.innerText += "Bt Esq"
+                    break;
+            }                     
+
+        }
+    </script>
+</body>
+</html>

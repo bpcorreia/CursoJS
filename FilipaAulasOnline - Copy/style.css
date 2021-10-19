@@ -1,0 +1,29 @@
+body {
+    background: rgba(59, 52, 57, 0.185);
+    font:normal 12pt Arial bold;
+}
+
+header {
+    color: rgb(0, 0, 0);
+    font:normal 19pt Arial Black;
+    text-align: left;
+    }
+
+section {
+    text-align: left;
+    background: rgba(9, 102, 223, 0.514);
+    border-radius: 10px;
+    padding: 10px;
+    width: 500 px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.747);
+    
+}
+input#aulasProf{
+    font: normal 10pt Verdana;
+}
+footer {
+    color: rgb(226, 131, 43);
+    text-align:left;
+    font-style: italic;
+}
